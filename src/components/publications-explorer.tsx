@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { PublicationType } from "@/lib/publications-data";
+import type { PublicationType, Publication } from "@/lib/publications-data";
 import { publications, uniquePublicationYears } from "@/lib/publications-data";
 import { Input } from "@/components/ui/input";
 import {
