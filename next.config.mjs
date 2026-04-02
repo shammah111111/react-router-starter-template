@@ -12,6 +12,18 @@ const nextConfig = {
       },
     ],
   },
+  // Allow cross-origin requests from network IPs during development
+  onDemandEntries: {
+    maxInactiveAge: 60 * 1000,
+    pagesBufferLength: 5,
+  },
+  ...(process.env.NODE_ENV === "development" && {
+    allowedDevOrigins: [
+      "localhost",
+      "127.0.0.1",
+      "192.168.0.122", // Allow access from this network IP
+    ],
+  }),
 };
 
 if (process.env.NODE_ENV === "development") {

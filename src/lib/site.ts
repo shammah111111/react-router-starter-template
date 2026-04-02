@@ -1,12 +1,12 @@
 export const siteConfig = {
-  name: "Christopher Kisa Ebenezer",
-  title: "Lecturer of Psychology",
+  name: " Kisa Christopher Ebenezer",
+  title: "Lecturer, Faculty of Education and Humanities ",
   university: "Gulu University",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.pages.dev",
   ogImage: "/og-default.png",
-  email: "c.ebenezer@guluniv.ac.ug",
+  email: "christopherkisa@gmail.com",
   description:
-    "Academic profile of Christopher Kisa Ebenezer — lecturer, researcher, and educator at Gulu University.",
+    "Academic profile of  Kisa Christopher Ebenezer — lecturer, researcher, and educator at Gulu University.",
   links: {
     scholar:
       "https://scholar.google.com/citations?user=placeholder&hl=en&oi=ao",

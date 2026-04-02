@@ -43,9 +43,29 @@ export default function HomePage() {
             <li key={p.id}>
               <Card className="transition-shadow hover:shadow-md">
                 <CardContent className="flex flex-wrap items-start justify-between gap-4 p-6">
-                  <div>
+                  <div className="flex-1">
                     <h3 className="font-display text-lg font-semibold leading-snug">
-                      {p.title}
+                      {p.link ? (
+                        <Link
+                          href={p.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-accent transition-colors"
+                        >
+                          {p.title}
+                        </Link>
+                      ) : p.doi ? (
+                        <Link
+                          href={`https://doi.org/${p.doi}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-accent transition-colors"
+                        >
+                          {p.title}
+                        </Link>
+                      ) : (
+                        p.title
+                      )}
                     </h3>
                     <p className="mt-1 text-sm text-muted-foreground">{p.authors}</p>
                     <p className="mt-1 text-sm font-medium">
@@ -109,7 +129,7 @@ export default function HomePage() {
           <CardContent className="flex flex-col gap-4 p-8 md:flex-row md:items-center md:justify-between">
             <div>
               <h2 className="font-display text-2xl font-bold">
-                Collaborate with {siteConfig.name.split(" ")[0]}
+                Collaborate with {siteConfig.name}
               </h2>
               <p className="mt-2 max-w-xl text-sm text-muted-foreground">
                 Guest lectures, joint grants, graduate supervision, and community projects —

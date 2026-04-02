@@ -32,8 +32,7 @@ export function SiteHeader() {
           href="/"
           className="font-display text-lg font-semibold tracking-tight text-primary md:text-xl"
         >
-          <span className="text-foreground">{siteConfig.name.split(" ")[0]}</span>{" "}
-          <span className="text-accent">Ebenezer</span>
+          <span className="text-foreground">{siteConfig.name.trim()}</span>
         </Link>
 
         <nav

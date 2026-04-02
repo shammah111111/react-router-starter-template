@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { MapPin, Clock, Mail } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
+import { GoogleMap } from "@/components/google-map";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { siteConfig } from "@/lib/site";
 import Link from "next/link";
@@ -29,8 +30,7 @@ export default function ContactPage() {
           Let&apos;s connect
         </h1>
         <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-          Use the secure form below (protected by Cloudflare Turnstile). Add Resend or
-          Email Workers in the server action to deliver mail in production.
+          Use this secure form below to get in touch. Your message will be safely delivered, and I will respond as soon as possible.
         </p>
       </header>
 
@@ -73,16 +73,16 @@ export default function ContactPage() {
 
           <Card className="overflow-hidden">
             <CardHeader>
-              <CardTitle className="text-lg">Map placeholder</CardTitle>
+              <CardTitle className="text-lg">Campus Location</CardTitle>
             </CardHeader>
             <CardContent className="p-0">
-              <div
-                className="flex aspect-video w-full items-center justify-center bg-muted text-sm text-muted-foreground"
-                role="img"
-                aria-label="Map placeholder: embed Google Maps or OpenStreetMap here"
-              >
-                Campus map iframe area — replace with your embed.
-              </div>
+              <GoogleMap
+                title="Gulu University Campus"
+                location="Gulu University, Gulu, Uganda"
+                lat={2.1808}
+                lng={32.3061}
+                zoom={16}
+              />
             </CardContent>
           </Card>
 
